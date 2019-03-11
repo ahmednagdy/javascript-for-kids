@@ -4,10 +4,61 @@
     <title>JavaScript for Kids</title>
     <script src="word-guess.js"></script>
     <style>
-    
+    .container
+    {
+      padding: 50px;
+      background-color: lightskyblue;
+      text-align: center;
+      height:210px;
+    }
+    #guessed
+    {
+      font-size: 30px;
+      color: green;
+      font-weight: bold;
+    }
+    #badguess
+    {
+      font-size: 30px;
+      color: darkred;
+      font-weight: bold;
+    }
+    #message
+    {
+      color:white;
+      font-size: 18px;
+      font-weight: bold;
+    }
+    #secretword
+    {
+      border: solid white;
+      border-radius: 5px;
+      border-width: 2px;
+      padding: 5px;
+      background-color: lightskyblue;
+      color: white;
+      font-weight: bold;
+      font-size: 15px;
+    }
+    #submit
+    {
+      width:80px;
+      height:33px;
+      background-color: rgb(53, 163, 206);
+      color: white;
+      border-radius: 5px;
+      border-style: none;
+      font-family: 'Times New Roman', Times, serif;
+      font-weight:bold;
+    }
+    #submit:hover
+    {
+      background-color: lightseagreen;
+    }
     </style>
   </head>
   <body>
+    <div class="container">
     <div>
        <p id="guessed"></p>
     </div>
@@ -19,5 +70,6 @@
     <div>
       <p id="badguess"></p>
     </div>
+  </div>
   </body>
 </html>

@@ -41,14 +41,21 @@ window.onload = function () {
     }
     else if (secret.length == 0 && badguesses.length == 0) //then it is first time ==> Submitting a word
     {
-      word = wordinput.value;
-      message.innerHTML = "Player 2, Guess a letter.";
-      wordinput.setAttribute("maxlength", "1");
-      wordinput.value = "";
-      // Fill this array with placeholders for guessing
-
-      for (i = 0; i < word.length; i++) { secret.push("_"); }
-      guessedbox.innerHTML = secret.join(" ");
+      if(wordinput.value == "")
+      {
+        message.innerHTML = "Please enter a word!";
+      }
+      else
+      {
+        word = wordinput.value;
+        message.innerHTML = "Player 2, Guess a letter.";
+        wordinput.setAttribute("maxlength", "1");
+        wordinput.value = "";
+        // Fill this array with placeholders for guessing
+  
+        for (i = 0; i < word.length; i++) { secret.push("_"); }
+        guessedbox.innerHTML = secret.join(" ");
+      }
     }
 
     // Start a loop that continues as long as the person has
